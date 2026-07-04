@@ -1,3 +1,5 @@
+[![Test](https://github.com/captchaly/captchaly-python/actions/workflows/test.yaml/badge.svg)](https://github.com/captchaly/captchaly-python/actions/workflows/test.yaml)
+
 # Captchaly Python SDK
 
 Official Python SDK for [Captchaly.com](https://captchaly.com).
