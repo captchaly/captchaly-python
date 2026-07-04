@@ -1,0 +1,32 @@
+{
+	"files.exclude": {
+		"**/__pycache__": true,
+		".pytest_cache": true,
+		".ruff_cache": true
+	},
+	"editor.inlayHints.enabled": "offUnlessPressed",
+	"python.analysis.typeCheckingMode": "standard",
+	"python.analysis.inlayHints.variableTypes": true,
+	"[python]": {
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": "always"
+		}
+	},
+	"isort.args": [
+		"--line-length",
+		"140",
+		"--multi-line",
+		"VERTICAL_GRID_GROUPED",
+		"--indent",
+		"\t"
+	],
+	"github.copilot.enable": {
+		"*": true,
+		"plaintext": true,
+		"markdown": true,
+		"scminput": false
+	},
+	"files.watcherExclude": {
+		"**/target/**": true
+	}
+}

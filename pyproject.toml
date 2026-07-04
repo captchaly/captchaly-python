@@ -1,0 +1,42 @@
+[project]
+name = "captchaly"
+version = "1.1.0"
+description = "Python SDK for Captchaly.com"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Captchaly", email = "admint@captchaly.com" }]
+urls = { "Homepage" = "https://captchaly.com", "Repository" = "https://github.com/captchaly/captchaly-python" }
+requires-python = ">=3.14"
+dependencies = [
+    "httpx[brotli,http2]>=0.28.1",
+    "synchronicity>=0.12.5",
+]
+
+[project.scripts]
+captchaly = "captchaly:main"
+
+[build-system]
+requires = ["uv_build>=0.11.3,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "pytest-cov>=7.1.0",
+    "synchronicity[compile]>=0.12.5",
+]
+
+[tool.pytest]
+addopts = [
+    "--verbose",
+    "--cov=captchaly",
+]
+asyncio_default_test_loop_scope = "session"
+asyncio_default_fixture_loop_scope = "session"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.format]
+indent-style = "tab"
