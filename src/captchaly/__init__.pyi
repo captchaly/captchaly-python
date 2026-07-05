@@ -1,4 +1,4 @@
-import src.captchaly.model
+import captchaly.model
 import typing
 import typing_extensions
 
@@ -36,18 +36,18 @@ class CaptchalyClient:
     _request: ___request_spec
 
     class __account_spec(typing_extensions.Protocol):
-        def __call__(self, /) -> src.captchaly.model.Account:
+        def __call__(self, /) -> captchaly.model.Account:
             """Get account information."""
             ...
 
-        async def aio(self, /) -> src.captchaly.model.Account:
+        async def aio(self, /) -> captchaly.model.Account:
             """Get account information."""
             ...
 
     account: __account_spec
 
     class __hcaptcha_spec(typing_extensions.Protocol):
-        def __call__(self, /, url: str, sitekey: str, proxy: str | None = None, *, tries: int = 3) -> src.captchaly.model.Hcaptcha:
+        def __call__(self, /, url: str, sitekey: str, proxy: str | None = None, *, tries: int = 3) -> captchaly.model.Hcaptcha:
             """Solve hCaptcha and return the captcha token (`h-captcha-response`) that to be submitted to the target website.
             Args:
                     url (str): The URL where the captcha is located on, or you can only just use the full domain name of the website (must include any subdomain). Captchaly will not try to access this URL therefore it will not be a problem if the captcha is behind some authentications. Examples: `https://www.example.com/examplepath`, `example.com`, `subdomain.example.com`
@@ -60,7 +60,7 @@ class CaptchalyClient:
             """
             ...
 
-        async def aio(self, /, url: str, sitekey: str, proxy: str | None = None, *, tries: int = 3) -> src.captchaly.model.Hcaptcha:
+        async def aio(self, /, url: str, sitekey: str, proxy: str | None = None, *, tries: int = 3) -> captchaly.model.Hcaptcha:
             """Solve hCaptcha and return the captcha token (`h-captcha-response`) that to be submitted to the target website.
             Args:
                     url (str): The URL where the captcha is located on, or you can only just use the full domain name of the website (must include any subdomain). Captchaly will not try to access this URL therefore it will not be a problem if the captcha is behind some authentications. Examples: `https://www.example.com/examplepath`, `example.com`, `subdomain.example.com`
@@ -76,7 +76,7 @@ class CaptchalyClient:
     hcaptcha: __hcaptcha_spec
 
     class __hcaptcha_enterprise_spec(typing_extensions.Protocol):
-        def __call__(self, /, url: str, sitekey: str, proxy: str | None = None, rqdata: str | None = None, *, tries: int = 3) -> src.captchaly.model.Hcaptcha:
+        def __call__(self, /, url: str, sitekey: str, proxy: str | None = None, rqdata: str | None = None, *, tries: int = 3) -> captchaly.model.Hcaptcha:
             """Solve hCaptcha Enterprise and return the captcha token (`h-captcha-response`) that to be submitted to the target website.
             Args:
                     url (str): The URL where the captcha is located on, or you can only just use the full domain name of the website (must include any subdomain). Captchaly will not try to access this URL therefore it will not be a problem if the captcha is behind some authentications. Examples: `https://www.example.com/examplepath`, `example.com`, `subdomain.example.com`
@@ -91,7 +91,7 @@ class CaptchalyClient:
             """
             ...
 
-        async def aio(self, /, url: str, sitekey: str, proxy: str | None = None, rqdata: str | None = None, *, tries: int = 3) -> src.captchaly.model.Hcaptcha:
+        async def aio(self, /, url: str, sitekey: str, proxy: str | None = None, rqdata: str | None = None, *, tries: int = 3) -> captchaly.model.Hcaptcha:
             """Solve hCaptcha Enterprise and return the captcha token (`h-captcha-response`) that to be submitted to the target website.
             Args:
                     url (str): The URL where the captcha is located on, or you can only just use the full domain name of the website (must include any subdomain). Captchaly will not try to access this URL therefore it will not be a problem if the captcha is behind some authentications. Examples: `https://www.example.com/examplepath`, `example.com`, `subdomain.example.com`
@@ -109,7 +109,7 @@ class CaptchalyClient:
     hcaptcha_enterprise: __hcaptcha_enterprise_spec
 
     class __turnstile_spec(typing_extensions.Protocol):
-        def __call__(self, /, url: str, sitekey: str, action: str | None = None, cdata: str | None = None, *, tries: int = 3) -> src.captchaly.model.Turnstile:
+        def __call__(self, /, url: str, sitekey: str, action: str | None = None, cdata: str | None = None, *, tries: int = 3) -> captchaly.model.Turnstile:
             """Solve Cloudflare Turnstile and return the captcha token (`cf-turnstile-response`) that to be submitted to the target website.
             Args:
                     url (str): The URL where the captcha is located on, or you can use only the full domain name of the website (must include any subdomain). Captchaly will not try to access this URL therefore it will not be a problem if the captcha is behind some authentications. Examples: `https://www.example.com/examplepath`, `example.com`, `subdomain.example.com`
@@ -124,7 +124,7 @@ class CaptchalyClient:
             """
             ...
 
-        async def aio(self, /, url: str, sitekey: str, action: str | None = None, cdata: str | None = None, *, tries: int = 3) -> src.captchaly.model.Turnstile:
+        async def aio(self, /, url: str, sitekey: str, action: str | None = None, cdata: str | None = None, *, tries: int = 3) -> captchaly.model.Turnstile:
             """Solve Cloudflare Turnstile and return the captcha token (`cf-turnstile-response`) that to be submitted to the target website.
             Args:
                     url (str): The URL where the captcha is located on, or you can use only the full domain name of the website (must include any subdomain). Captchaly will not try to access this URL therefore it will not be a problem if the captcha is behind some authentications. Examples: `https://www.example.com/examplepath`, `example.com`, `subdomain.example.com`
@@ -142,7 +142,7 @@ class CaptchalyClient:
     turnstile: __turnstile_spec
 
     class __recaptcha_v2_spec(typing_extensions.Protocol):
-        def __call__(self, /, url: str, sitekey: str, *, tries: int = 3) -> src.captchaly.model.Recaptcha:
+        def __call__(self, /, url: str, sitekey: str, *, tries: int = 3) -> captchaly.model.Recaptcha:
             """Solve reCAPTCHA v2 and return the captcha token (`g-recaptcha-response`) that to be submitted to the target website.
             Args:
                     url (str): The URL where the captcha is located on, or you can only just use the full domain name of the website (must include any subdomain). Captchaly will not try to access this URL therefore it will not be a problem if the captcha is behind some authentications. Examples: `https://www.example.com/examplepath`, `example.com`, `subdomain.example`
@@ -153,7 +153,7 @@ class CaptchalyClient:
             """
             ...
 
-        async def aio(self, /, url: str, sitekey: str, *, tries: int = 3) -> src.captchaly.model.Recaptcha:
+        async def aio(self, /, url: str, sitekey: str, *, tries: int = 3) -> captchaly.model.Recaptcha:
             """Solve reCAPTCHA v2 and return the captcha token (`g-recaptcha-response`) that to be submitted to the target website.
             Args:
                     url (str): The URL where the captcha is located on, or you can only just use the full domain name of the website (must include any subdomain). Captchaly will not try to access this URL therefore it will not be a problem if the captcha is behind some authentications. Examples: `https://www.example.com/examplepath`, `example.com`, `subdomain.example`
@@ -167,7 +167,7 @@ class CaptchalyClient:
     recaptcha_v2: __recaptcha_v2_spec
 
     class __recaptcha_v3_spec(typing_extensions.Protocol):
-        def __call__(self, /, url: str, sitekey: str, action: str, fast: bool | None = None, *, tries: int = 3) -> src.captchaly.model.Recaptcha:
+        def __call__(self, /, url: str, sitekey: str, action: str, fast: bool | None = None, *, tries: int = 3) -> captchaly.model.Recaptcha:
             """Solve reCAPTCHA v3 and return the captcha token (`g-recaptcha-response`) that to be submitted to the target website.
             Args:
                     url (str): The URL where the captcha is located on, or you can only just use the full domain name of the website (must include any subdomain). Captchaly will not try to access this URL therefore it will not be a problem if the captcha is behind some authentications. Examples: `https://www.example.com/examplepath`, `example.com`, `subdomain.example`
@@ -182,7 +182,7 @@ class CaptchalyClient:
             """
             ...
 
-        async def aio(self, /, url: str, sitekey: str, action: str, fast: bool | None = None, *, tries: int = 3) -> src.captchaly.model.Recaptcha:
+        async def aio(self, /, url: str, sitekey: str, action: str, fast: bool | None = None, *, tries: int = 3) -> captchaly.model.Recaptcha:
             """Solve reCAPTCHA v3 and return the captcha token (`g-recaptcha-response`) that to be submitted to the target website.
             Args:
                     url (str): The URL where the captcha is located on, or you can only just use the full domain name of the website (must include any subdomain). Captchaly will not try to access this URL therefore it will not be a problem if the captcha is behind some authentications. Examples: `https://www.example.com/examplepath`, `example.com`, `subdomain.example`
@@ -200,7 +200,7 @@ class CaptchalyClient:
     recaptcha_v3: __recaptcha_v3_spec
 
     class __geetest_spec(typing_extensions.Protocol):
-        def __call__(self, /, url: str, captchaId: str, *, tries: int = 3) -> src.captchaly.model.Geetest:
+        def __call__(self, /, url: str, captchaId: str, *, tries: int = 3) -> captchaly.model.Geetest:
             """Solve GeeTest and return the captcha token that to be submitted to the target website.
             Args:
                     url (str): The URL where the captcha is located on, or you can only just use the full domain name of the website (must include any subdomain). Captchaly will not try to access this URL therefore it will not be a problem if the captcha is behind some authentications. Examples: `https://www.example.com/examplepath`, `example.com`, `subdomain.example`
@@ -211,7 +211,7 @@ class CaptchalyClient:
             """
             ...
 
-        async def aio(self, /, url: str, captchaId: str, *, tries: int = 3) -> src.captchaly.model.Geetest:
+        async def aio(self, /, url: str, captchaId: str, *, tries: int = 3) -> captchaly.model.Geetest:
             """Solve GeeTest and return the captcha token that to be submitted to the target website.
             Args:
                     url (str): The URL where the captcha is located on, or you can only just use the full domain name of the website (must include any subdomain). Captchaly will not try to access this URL therefore it will not be a problem if the captcha is behind some authentications. Examples: `https://www.example.com/examplepath`, `example.com`, `subdomain.example`
