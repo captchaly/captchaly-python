@@ -4,6 +4,7 @@
 
 Official Python SDK for [Captchaly.com](https://captchaly.com).
 
+Captchaly is the most advanced captcha solving service for enterprises. Providing large-scale automation and data scraping. Allow AI agents to bypass captchas and access the web without human intervention. Try for free at [https://captchaly.com](https://captchaly.com).
 
 ## Features
 
