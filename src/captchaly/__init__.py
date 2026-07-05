@@ -33,7 +33,7 @@ class CaptchalyClient:
 		apikey = os.environ.get(_APIKEY_ENV_NAME, apikey)
 		if not apikey:
 			raise ValueError(
-				f"API key must be provided either as an argument or through the environment variable '{_APIKEY_ENV_NAME}'"
+				f"API key must be provided either as an argument or through the environment variable '{_APIKEY_ENV_NAME}'!"
 			)
 
 		self._apikey = apikey
@@ -66,7 +66,7 @@ class CaptchalyClient:
 		else:
 			raise CaptchalyError(
 				f"Failed to get successful response after {tries} attempts. "
-				"Check your parameter or try again later. If the issue persists, please contact support"
+				"Check your parameter or try again later. If the issue persists, please contact support."
 			)
 
 		# TODO: only warn once per session
