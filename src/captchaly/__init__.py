@@ -97,7 +97,7 @@ class CaptchalyClient:
 		Args:
 			url (str): The URL where the captcha is located on, or you can only just use the full domain name of the website (must include any subdomain). Captchaly will not try to access this URL therefore it will not be a problem if the captcha is behind some authentications. Examples: `https://www.example.com/examplepath`, `example.com`, `subdomain.example.com`
 
-			sitekey (str): The value of the data-sitekey property of the captcha `div` element, or the value of the `sitekey` parameter of the requests from the webpage to the hCaptcha server. For example: `a5f74b19-9e45-40e0-b45d-47ff91b7a6c2`
+			sitekey (str): The value of the `data-sitekey` property of the captcha `div` element, or the value of the `sitekey` parameter of the requests from the webpage to the hCaptcha server. For example: `a5f74b19-9e45-40e0-b45d-47ff91b7a6c2`
 
 			proxy (Optional[str]): The proxy used to solve the captcha. Must match the format `scheme://host:port`, or `scheme://username:password@host:port` if authentication is required. Examples: `http://john:my_password@myproxy.com:8080`, `http://123.123.123.123:8080`
 
@@ -126,7 +126,7 @@ class CaptchalyClient:
 		Args:
 			url (str): The URL where the captcha is located on, or you can only just use the full domain name of the website (must include any subdomain). Captchaly will not try to access this URL therefore it will not be a problem if the captcha is behind some authentications. Examples: `https://www.example.com/examplepath`, `example.com`, `subdomain.example.com`
 
-			sitekey (str): The value of the data-sitekey property of the captcha `div` element, or the value of the `sitekey` parameter of the requests from the webpage to the hCaptcha server. For example: `a5f74b19-9e45-40e0-b45d-47ff91b7a6c2`
+			sitekey (str): The value of the `data-sitekey` property of the captcha `div` element, or the value of the `sitekey` parameter of the requests from the webpage to the hCaptcha server. For example: `a5f74b19-9e45-40e0-b45d-47ff91b7a6c2`
 
 			proxy (Optional[str]): The proxy used to solve the captcha. Must match the format `scheme://host:port`, or `scheme://username:password@host:port` if authentication is required. Examples: `http://john:my_password@myproxy.com:8080`, `http://123.123.123.123:8080`
 
