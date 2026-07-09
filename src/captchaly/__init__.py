@@ -142,7 +142,7 @@ class CaptchalyClient:
 			params["proxy"] = proxy
 		if isinstance(rqdata, str):
 			params["rqdata"] = rqdata
-		data = await self._request("GET", "/hcaptcha", tries=tries, params=params)
+		data = await self._request("GET", "/hcaptcha-enterprise", tries=tries, params=params)
 		return model.Hcaptcha(**data)  # pyright: ignore[reportCallIssue]
 
 	async def turnstile(
